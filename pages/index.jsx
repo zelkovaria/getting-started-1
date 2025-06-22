@@ -1,18 +1,11 @@
-import Head from "next/head";
-import Image from "next/image";
-import { Geist, Geist_Mono } from "next/font/google";
-import styles from "@/styles/Home.module.css";
-
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
-
-export default function Home() {
-  return <></>;
+function ProductPage() {
+  return <div style={{ color: "blue" }}>hello next</div>;
 }
+
+/**
+ * 1. 상품 목록 페이지 - '/'
+ * 2. 상품 상세 페이지 - '/products/productId'
+ * 3. 장바구니 페이지 - '/carts'
+ */
+
+export default ProductPage;
