@@ -12,4 +12,17 @@ function fetchProducts(productId) {
   });
 }
 
-export { fetchProducts };
+function createCartItem({ id, name, imageUrl, price }) {
+  return instance.post("/carts", {
+    id: id,
+    name: name,
+    imageUrl,
+    price,
+  });
+}
+
+function fetchCarts() {
+  return instance.get("/carts");
+}
+
+export { fetchProducts, createCartItem, fetchCarts };
