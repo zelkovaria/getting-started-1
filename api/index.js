@@ -4,8 +4,12 @@ const instance = axios.create({
   baseURL: "http://localhost:4000",
 });
 
-function fetchProducts(id) {
-  return instance.get(`/products/${id}`);
+function fetchProducts(productId) {
+  return instance.get("/products/", {
+    params: {
+      id: productId,
+    },
+  });
 }
 
 export { fetchProducts };
